@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box;
+}
+.main{
+  height: 100vh;
+  width: 100vw;
+  background-image: image-url('main.jpg');
+  background-color:rgba(255,255,255,0.5);
+  background-blend-mode:lighten;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.top-page-header {
+  width: 100vw;
+  padding: 2vh 15vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.search-bar-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pfvideo-icon {
+  width: 10vw;
+  margin-right: 10vw;
+}
+
+.search-form {
+  width: 65vw;
+  height: 5vh;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.search-form>.input-box {
+  width: 100%;
+  height: 5vh;
+  padding-left: 10px;
+}
+
+.search-button {
+  width: 5vh;
+  border: 0;
+  cursor: pointer;
+  background-color: #CCFFCC;
+  padding: 8px;
+}
+
+.search-icon {
+  width: 100%;
+}
+
+.nav {
+  font-size: 18px;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1vh 0;
+}
+
+.lists-left {
+  display: flex;
+  min-width: 200px;
+
+}
+
+.category-list {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+}
+
+.brand-list {
+  text-decoration: none;
+  color: #333333;
+}
+
+.lists-right {
+  display: flex;
+  list-style: none;
+  align-items: flex-end;
+}
+
+
+.user-nickname {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
+}
+
+
+.logout {
+  text-decoration: none;
+  color: #333333;
+}
+
+.login {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+  color: #333333;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: #333333;
+}
+
+.home {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+  color: #333333;
+}
+
+.message {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+  color: #333333;
+}
+
+.mypage {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+  color: #333333;
+}
+
+$backWidth: 512px; $backHeight: 432px;
+$bushesWidth: 508px; $bushesHeight: 79px;
+$groundWidth: 68px; $groundHeight: 22px;
+$marioWidth: 30px; $marioHeight: 54px;
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.footer {
+  background:  #CCFFCC;
+  padding: 20px 0px 22px 0px;
+  display: flex;
+  justify-content: space-around;
+}
+.footer-logo {
+  font-size: 45px;
+  color: #111;
+  font-weight: 300;
+}
+.copy {
+  color: #111;
+  text-align: right;
+  font-size: 18px;
+  margin-top: 40px;
+}
+
+
+
+.greeting{
+   margin-bottom: 20px;
+   flex-wrap: wrap;
+   display: flex;
+   justify-content: center;
+}
+.new_tweet{
+  text-decoration: none;
+  font-size: 30px;
+  color: #333333;
+  padding-top: 50px;
+}
+
+.tweet-lists {
+  width: 100vw;
+  display: flex;
+  align-content: flex-start;
+}
+
+.card_wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: calc(100vh - 400px);
+}
+.card {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 25px;
+}
+.tweet_img {
+  margin-bottom: 16px;
+}
+.tweet_title {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.tweet_user {
+  display: block;
+  font-size: 12px;
+  color: #111;
+  text-align: right;
+  text-decoration: underline;
+}
+//  tweet btn //
+.shadow {
+  margin-top: 30px;
+  width:120px;
+  font-size:20px;
+  color:#333333;
+  text-align:center;
+  display:block;
+  padding:10px 0 10px;
+  background-color: #CCFFCC;
+  border-radius:5px;
+  box-shadow:1px 1px #1A6EA0;
+  text-decoration: none;
+}
