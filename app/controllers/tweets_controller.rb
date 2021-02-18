@@ -1,5 +1,7 @@
 class TweetsController < ApplicationController
-  before_action :move_to_index, except: [:index]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :move_to_index, except: [:index,:show]
+  before_action :group_tweet, only: [:show, :edit, :update, :destroy]
   def index
     @tweets = Tweet.includes(:user)
   end
@@ -21,7 +23,29 @@ class TweetsController < ApplicationController
   end
 
   def show
-    @tweet = Tweet.find(params[:id])
+  end
+  def edit
+    redirect_to root_path unless current_user.id == @tweet.user_id
+  end
+
+  def update
+    if @tweet.update(tweet_params)
+      redirect_to tweet_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    if current_user.id == @tweet.user_id
+      if @tweet.destroy
+        redirect_to root_path
+      else
+        render :show, alert: 'Failed to delete'
+      end
+    else
+      redirect_to root_path
+    end
   end
 
  private
