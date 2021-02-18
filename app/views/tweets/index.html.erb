@@ -1,7 +1,9 @@
 <div class="main">
+  <% if user_signed_in? %>
       <div class="greeting">
         <%= link_to 'New Tweet',"#", class:"shadow" %>
       </div>
+  <% end %>    
   <ul class='tweet-lists'>  
   </ul>
 </div>
