@@ -8,14 +8,17 @@
   </div>
   <div class='nav'>
     <ul class='lists-right'>
+    <% if user_signed_in? %>
       <li><%= link_to  "#", class: "user-nickname" %></li>
       <li><%= link_to 'Home', "/", class: "home"%></li>
       <li><%= link_to 'Favorite', "#", class: "message"%></li>
       <li><%= link_to 'Mypage', "#", class: "mypage"%></li>
       <li><%= link_to 'Log Out', "#", method: :delete, class: "logout"%> </li>
+    <% else %>  
       <li><%= link_to 'ゲストログイン（閲覧用）', "#", method: :post, class: "login" %></li>
       <li><%= link_to 'Log in', "#", class: "login" %></li>
       <li><%= link_to 'Sing up', "#", class: "sign-up" %></li>
+    <% end %>  
     </ul>
   </div>
 </header>
