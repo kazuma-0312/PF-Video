@@ -46,6 +46,13 @@
     <div class="option">
 
       <div class="favorite-btn">  
+      <% if current_user.liked_by?(@tweet.id) %>
+      <%= link_to 'お気に入りを外す', tweet_destroy_like_path(@tweet), method: :DELETE, class: "tweet_favorite"  %>
+      <%= @tweet.likes.count %>
+      <% else %>     
+        <%= link_to 'お気に入り', tweet_create_like_path(@tweet), method: :POST, class:"tweet_favorite" %>
+        <%= @tweet.likes.count %>
+      <% end %>  
       </div>
       <div class="report-btn">
       <span>不適切な商品の通報</span>
