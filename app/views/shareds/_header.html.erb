@@ -9,7 +9,7 @@
   <div class='nav'>
     <ul class='lists-right'>
     <% if user_signed_in? %>
-      <li><%= link_to  "#", class: "user-nickname" %></li>
+      <li><%= link_to  current_user.nickname,"#", class: "user-nickname" %></li>
       <li><%= link_to 'Home', "/", class: "home"%></li>
       <li><%= link_to 'Favorite', "#", class: "message"%></li>
       <li><%= link_to 'Mypage', "/users/#{current_user.id}", class: "mypage"%></li>
