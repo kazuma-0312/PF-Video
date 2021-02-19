@@ -12,7 +12,7 @@
         <div class="card_body">
           <%= link_to tweet.title, tweet_path(tweet.id), class:"tweet_title"%>
           <%= tweet.text %>
-          <%= link_to "#{tweet.user.nickname}",class:"tweet_user" %>
+          <%= link_to "#{tweet.user.nickname}",  user_path(tweet.user_id),class:"tweet_user" %>
         </div>
       </div>
     </div>
