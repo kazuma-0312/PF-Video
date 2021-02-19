@@ -3,7 +3,6 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  validates :nickname, presence: true
   
   has_many :tweets
   has_many :likes, foreign_key: :user_id, dependent: :destroy
@@ -14,6 +13,9 @@ class User < ApplicationRecord
     likes.where(tweet_id: tweet_id).exists?
   end
 
-
-
+  def self.guest
+    find_or_create_by!(email: 'guest@example.com') do |user|
+      user.password = SecureRandom.urlsafe_base64
+    end
+  end
 end
