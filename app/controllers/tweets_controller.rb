@@ -23,6 +23,8 @@ class TweetsController < ApplicationController
   end
 
   def show
+    @comments = @tweet.comments.includes(:user)
+    @comment = Comment.new
   end
   def edit
     redirect_to root_path unless current_user.id == @tweet.user_id
