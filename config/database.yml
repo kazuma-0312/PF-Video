@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
-  database: pf_video_production
-  username: pf_video
+  database: <%= ENV['PF_VIDEO_DATABASE'] %>
+  username: <%= ENV['PF_VIDEO_DATABASE_USERNAME'] %>
   password: <%= ENV['PF_VIDEO_DATABASE_PASSWORD'] %>
+  host: <%= ENV['PF_VIDEO_DATABASE_HOST'] %>
