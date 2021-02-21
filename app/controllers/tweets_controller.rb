@@ -56,7 +56,7 @@ class TweetsController < ApplicationController
 
  private
   def tweet_params
-    params.require(:tweet).permit(:title, :youtube_url, :text).merge(user_id: current_user.id)
+    params.require(:tweets).permit(:title, :youtube_url, :text).merge(user_id: current_user.id)
   end
 
   def group_tweet
