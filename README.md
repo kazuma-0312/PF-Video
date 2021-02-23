@@ -84,6 +84,7 @@ $ rails s
 - heroku 7.47.7 
 - Docker 20.10.2
 - docker-compose 1.27.4
+- circle CI/CD
 
 
 ## usersテーブル
