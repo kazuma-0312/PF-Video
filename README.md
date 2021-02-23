@@ -13,7 +13,7 @@
 コメントやいいねでコミニケーションができる
 
 # App URL
-### **https://pfvideo.herokuapp.com/**
+### **https://pf-video.herokuapp.com/**
 
 # 利用方法
 
@@ -58,17 +58,19 @@
 
 # ローカルでの動作方法
 
-$ git clone https://github.com/kazuma-0312/PFvideo.git
+$ git clone https://github.com/kazuma-0312/pf-video.git
 </br>
-$ cd PFvideo
+$ cd pf-video
 </br>
-$ bundle install
+$ docker-compose build
+</br>
+$ docker-compose up -d
+</br>
+$ docker-compose exec web bash
 </br>
 $ rails db:create
 </br>
 $ rails db:migrate
-</br>
-$ rails s
 </br>
  http://localhost:3000
 
